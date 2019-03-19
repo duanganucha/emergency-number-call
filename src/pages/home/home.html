@@ -1,14 +1,16 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar color=dark>
     <ion-title>
-      Ionic Blank
+      <img src="../../assets/imgs/emer-head.jpg">
     </ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+    <div *ngFor="let num of nums">
+      <img class="num" object-fit: cover src="../../assets/imgs/{{ num }}.png"  (click)="onCall(num)" />
+    </div>
+  
 </ion-content>
